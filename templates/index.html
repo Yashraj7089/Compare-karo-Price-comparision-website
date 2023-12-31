@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Compare-Karo | Price Comparision Website</title>
+         <link rel = "icon" href = "{{ url_for('static', filename='url logo 2.ico') }}" type = "image/x-icon">
+         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
+</head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="{{ url_for('static', filename='compare-karo.png') }}" alt="Your Image" width="130px" style="position: relative; left: -60px; top: 8px;" >
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#" onclick="showabout()">About</a></li>
+                            <li><a href="#" onclick="showcontact()">Contact</a></li>
+                            <li class="drop-down"><a href="#">More &#9662;</a>
+                                <div class="mega-menu fadeIn animated">
+                                    <div class="mm-6column">
+                                        <span class="left-images">
+                                            <img src=" {{ url_for('static', filename='small_banner.jpg') }}" alt="" style="height: 100%; width: 100%;">
+                                        <p>Most Popular Styles </p>
+                        </span>
+                                    </div>
+                                        <div class="mm-3column">
+                                        <span class="categories-list">
+                                    <ul class="menu-col-1" style="position: relative; left: 10px;">
+                                    <span>Computer</span>
+                                        <li>Desktops <br></li>
+                                        <li>Laptops <br></li>
+                                        <li>Tablets <br></li>
+                                        <li>Monitors</li>
+                                        <li>Networking Printers <br></li>
+                                        <li>Scanners <br></li>
+                                        <li>Jumpers & Cardigans <br></li>
+                                        <li><a class="mm-view-more" href="#">View more →</a></li>
+                                    </ul>
+                                </span>
+                                    
+                                    </div>
+                                    <div class="mm-3column">
+                                <span class="categories-list">
+                                <ul class="menu-col-1" style="position: relative; left: 80px;">
+                                     <span>TV & Video <br></span>
+                                        <li>LED TVs <br> </li>
+                                        <li>Plasma TVs <br> </li>
+                                        <li>3D TVs <br> </li>
+                                        <li>DVD & Blu-ray Players  <br> </li>
+                                        <li>Home Theater Systems <br> </li>
+                                        <li>Cell Phones <br> </li>
+                                        <li>Apple iPhone <br> </li>
+                                        <li><a class="mm-view-more" href="#">View more →</a></li>
+                                    </ul>
+                                </span>							
+                                    </div>
+                                    <div class="mm-3column">
+                                        <span class="categories-list">
+                                <ul class="menu-col-1" style="position: relative; left: 150px;">
+                                    <span>Car Electronics <br></span>
+                                    <li>GPS & Navigation <br></li>
+                                    <li>In-Dash Stereos <br> </li>
+                                    <li>Speakers <br> </li>
+                                    <li>Subwoofers <br> </li>
+                                    <li>Amplifiers <br> </li>
+                                    <li>MP3 Players <br> </li>
+                                    <li>iPods <br> </li>
+                                       <li><a class="mm-view-more" href="#">View more →</a></li>
+                                </ul>
+                            </span>
+                                </div>
+                            </div>
+                     
+                            </li>
+                        </ul>
+                   </nav>
+                   <button class="login-btn" id="show-contact-button"onclick="showaccount()">Login/Sign-up</button>
+
+                </div>
+                <div class="row">
+                    <div class="col-1">
+                        <div class ="slider-container">
+                            <div class="slide">
+                                <img src=" {{ url_for('static', filename='pcw-1.jpg') }}" alt=""style="position: relative; left: 5px;">
+                            </div>
+                            <div class="slide">
+                                <img src=" {{ url_for('static', filename='pcw-2.jpg') }}" alt="" style="position: relative; left: 5px;">
+                            </div>
+                            <div class="slide">
+                                <img src=" {{ url_for('static', filename='pcw-3.jpg') }}" alt="" style="position: relative; left: 5px;">
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="col-2">
+                        <h1>User-Friendly and Efficient</h1>
+                        <p>Our platform is designed to be easy to navigate and use, ensuring a seemless 
+                            experience for our users. With a wide range of products available, you can 
+                            find exactly what you're looking for with just few clicks.
+                        </p>
+                        <h1>Extensive Product Selection</h1>
+                        <p>We offer a vast selection of products from various retailers, giving you the
+                            freedom to choose from a wide range of options. Whether you're looking for 
+                            electronics, fashion, or home goods, we have it all.
+                        </p>
+                        <h1>Accurate Price Comparisions</h1>
+                        <p>Our plateform ensures that you get the most accurate price comparisions, 
+                            allowing you to make informed purchasing decisions. We gather data from
+                            multiple websites to provide you with the best possible deals.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container-2">
+            <div class="row">
+                <div class="container-2-col-1">
+                    <img src=" {{ url_for('static', filename='pcw-5.png') }}" alt="" style="height: 250px; position: relative; bottom: -50px; left: 20px;">
+                    <h1>Find The Best Price Here</h1>
+                    <h6>Compare prices from top retailers and save money on your purchase.
+                    </h6> <br>
+                    <a href="#" class="btn-1">Start </a>
+                    <a href="#" class="btn-2">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-3">
+            <div class="row">
+                <div class="container-3-col-1">
+                    <h1>Stay Updated Here</h1>
+                    <h1>Latest Deals Awaits</h1><br>
+                    <p>Subscribe to our newsletter for the latest deals and plateform news.</p><br>
+                    <input type="email" id="email" placeholder="Your Gmail ID" required>    
+                    <a href="#" class="btn-3">Sign Up </a>
+                </div>
+            </div>
+        </div>
+        <!-----Account page-->
+        
+        
+        <div class="overlay"></div>
+        
+        <div class="container-4">
+            <div class="row">
+                <div class="col-2">
+                <div class="form-container">
+                    <span onclick="closeaccount()"  id="cross">&times;</span>
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="Indicator" style="transform: translateX(100px);">
+                    </div>
+
+                    <form id="LoginForm">
+                        <input type="text" placeholder="Username">
+                        <input type="Password" placeholder="Password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">Forger password</a>
+                    </form>
+                    <form id="RegForm">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email" style="position: relative; width: 260px; ">
+                        <input type="Password" placeholder="Password">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----contact form-->
+    <div class="container-5">
+        <section class="contactpage">
+            <span id="cross-2" onclick="closecontact()">&times;</span>
+            <div class="content">
+            <h2>Contact Us</h2><br>
+            <p>Fill out your information and an UrbanStore representative will reach out to you.</p>
+        </div>
+        <div class="contaier">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Pardeshipura Indore MP India.</p>
+                    </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>+918966544232</p>
+                        </div>
+                        </div>
+                        <div class="box">
+                            <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                            <div class="text">
+                                <h3>Email</h3>
+                                <p >Compare-Karo@gmail.com</p>
+                            </div>
+                            </div>
+                            </div>
+                    <div class="contactForm">
+                        <form >
+                            <h2 style="position: relative; top: -40px; left: 60px;">Send Message</h2>
+                            <div class="inputbox">
+                                <input type="text" name="" required="required">
+                                <span style="position: relative; top: -70px;">Full Name</span>
+                            </div>
+                            <div class="inputbox">
+                                <input type="text" name="" required="required">
+                                <span style="position: relative; top: -70px;" >Email</span>
+                            </div>
+                            <div class="inputbox">
+                                <textarea rows="5" cols="41" required="required"></textarea>
+                                <span style="position: relative; top: -110px;">Type your Message</span>
+                            </div>
+                            <div class="inputbox">
+                                <input class="btn" type="submit" name="" value="Send">
+                                
+                            </div>
+                        </form>
+                    </div>
+            </div>
+    </section>
+</div>
+    
+<!-----about section-->
+
+<div class="container-6">
+    <div class="background">
+        <span id="cross-3" onclick="closeabout()">&times;</span>
+        <div class="imagecontainer" >
+            <img src=" {{ url_for('static', filename='myimage.jpg') }}" >
+        </div>
+        <div class="textcontainer" style="position: relative; width: auto; height: auto;" >
+            <h1>About Us</h1><br>
+            <h5>This is Developed by Yashraj Singh Tomar</h2>
+            <p>A price comparison website, also known as a price aggregator or shopping comparison site, is a valuable online tool that empowers consumers to make informed purchasing decisions. These platforms allow users to search and compare prices for products and services across various online and offline retailers. By providing real-time price data and product information, price comparison websites enable shoppers to identify the best deals, discounts, and offers available in the market.
+            </p>
+        </div>
+    </div>
+</div>
+    
+    
+    <!-------js for toogle Form----->
+    <script>
+        function showaccount(){
+            document.querySelector('.overlay').classList.add('showoverlay');
+            document.querySelector('.container-4').classList.add('showcontainer-4');
+
+             // Set the position of the container based on the current scroll position
+    container.style.top = scrollPosition + 'px';
+    container.classList.add('showcontainer-4');
+
+            document.body.style.overflow = 'hidden';
+        }
+        function closeaccount(){
+            document.querySelector('.overlay').classList.remove('showoverlay');
+            document.querySelector('.container-4').classList.remove('showcontainer-4');
+
+             // Reset the position of the container
+    container.style.top = '0';
+    container.classList.remove('showcontainer-4');
+
+            document.body.style.overflow = 'auto';
+        }
+
+        function showcontact(){
+            document.querySelector('.overlay').classList.add('showoverlay');
+            document.querySelector('.container-5').classList.add('showcontainer-5');
+
+             // Set the position of the container based on the current scroll position
+    container.style.top = scrollPosition + 'px';
+    container.classList.add('showcontainer-5');
+
+            document.body.style.overflow = 'hidden';
+        }
+        function closecontact(){
+            document.querySelector('.overlay').classList.remove('showoverlay');
+            document.querySelector('.container-5').classList.remove('showcontainer-5');
+
+             // Reset the position of the container
+    container.style.top = '0';
+    container.classList.remove('showcontainer-5');
+
+            document.body.style.overflow = 'auto';  
+        }
+
+        
+        function showabout(){
+            document.querySelector('.overlay').classList.add('showoverlay');
+            document.querySelector('.container-6').classList.add('showcontainer-6');
+
+             // Set the position of the container based on the current scroll position
+    container.style.top = scrollPosition + 'px';
+    container.classList.add('showcontainer-6');
+
+            document.body.style.overflow = 'hidden';
+        }
+        function closeabout(){
+            document.querySelector('.overlay').classList.remove('showoverlay');
+            document.querySelector('.container-6').classList.remove('showcontainer-6');
+
+             // Reset the position of the container
+    container.style.top = '0';
+    container.classList.remove('showcontainer-6');
+
+            document.body.style.overflow = 'auto';  
+        }
+
+        var LoginForm = document.getElementById("LoginForm")
+        var RegForm = document.getElementById("RegForm")
+        var Indicator = document.getElementById("Indicator")
+    
+
+            function register(){
+                RegForm.style.transform = "translateX(0px)";
+                LoginForm.style.transform = "translateX(0px)";
+                Indicator.style.transform = "translateX(100px)";
+               
+            }
+            function login(){
+                RegForm.style.transform = "translateX(300px)";
+                LoginForm.style.transform = "translateX(300px)";
+                Indicator.style.transform = "translateX(0px)";
+               
+            }
+    </script>
+    
+          
+
+    <!----footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-col-1">
+                    <h3>Download Our APP</h3>
+                    <p>Download App for Android and IOS mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="{{ url_for('static', filename='play-store.png') }}" >
+                        <img src="{{ url_for('static', filename='app-store.png') }}" >
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="{{ url_for('static', filename='compare-karo white.png') }}"   style="position: relative; left: 60px;" width="600px">
+                <p>Our Purpose Is To Empower Consumers With The Ability To Find The Best Deals. </p>
+                </div>
+                <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                    </div>
+                    <p class="copyright" style="position: relative; left: 20px;"><i>&copy;</i> 2023 All rights reserved. - Yashraj Singh Tomar</p>
+                    <p class="social" style="position: relative; right: -790px;"><img src="{{ url_for('static', filename='facebook.png') }}" width="20px" ><img src="{{ url_for('static', filename='instagram.png') }}"width="20px" ><img src="{{ url_for('static', filename='linkedin.png') }}" width="20px"> <img src="{{ url_for('static', filename='twitter.png') }}" width="20px" ><img src="{{ url_for('static', filename='youtube.png') }}" width="20px"></p>
+                    
+                </div>
+            </div>
+            <hr>
+        </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="{{ url_for('static', filename='pcw.js') }}"></script>
+    </body>
+
+</html>
